@@ -1,33 +1,37 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IPL Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <header>
-        <h1>IPL Ticket Booking 2026</h1>
+        <div class="brand">IPL Ticket Booking 2026</div>
         <nav>
-            <a href="#matches">Matches</a> |
-            <a href="#booking">Book Ticket</a> |
-            <a href="#mybookings">My Bookings</a> |
+            <a href="#matches">Matches</a>
+            <a href="#booking">Book Ticket</a>
+            <a href="#mybookings">My Bookings</a>
             <a href="#guidelines">Guidelines</a>
         </nav>
     </header>
 
     <hr>
 
-    <section>
+    <section class="hero">
         <h1>Experience The Stadium Energy Live!</h1>
         <p>Book your IPL tickets now!</p>
-        <a href="#matches">View Schedule</a>
-        <a href="#booking">Book Ticket</a>
+        <a href="#matches" class="btn">View Schedule</a>
+        <a href="#booking" class="btn btn-outline">Book Ticket</a>
     </section>
 
     <hr>
 
-    <section>
+    <section class="card">
         <h2>About IPL 2026</h2>
         <h3>Popular Teams</h3>
         <ul>
@@ -49,87 +53,97 @@
 
     <hr>
 
-    <section id="matches">
+    <section id="matches" class="card">
         <h2>Match Schedule</h2>
 
-        <label>Filter by Team:</label>
-        <select>
-            <option>All Teams</option>
-            <option>RCB</option>
-            <option>CSK</option>
-            <option>MI</option>
+        <label for="team-filter">Filter by Team:</label>
+        <select id="team-filter" name="team-filter">
+            <option value="all">All Teams</option>
+            <option value="RCB">RCB</option>
+            <option value="CSK">CSK</option>
+            <option value="MI">MI</option>
         </select>
 
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Match No.</th>
-                <th>Teams</th>
-                <th>Date & Time</th>
-                <th>Venue</th>
-                <th>General</th>
-                <th>Premium</th>
-                <th>VIP</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>RCB vs MI</td>
-                <td>01-04-2026</td>
-                <td>Bengaluru</td>
-                <td>800</td>
-                <td>1500</td>
-                <td>3000</td>
-                <td><a href="#booking">Book</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>CSK vs KKR</td>
-                <td>03-04-2026</td>
-                <td>Chennai</td>
-                <td>700</td>
-                <td>1400</td>
-                <td>2800</td>
-                <td><a href="#booking">Book</a></td>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Match No.</th>
+                    <th>Teams</th>
+                    <th>Date &amp; Time</th>
+                    <th>Venue</th>
+                    <th>General</th>
+                    <th>Premium</th>
+                    <th>VIP</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>RCB vs MI</td>
+                    <td>01-04-2026</td>
+                    <td>Bengaluru</td>
+                    <td>800</td>
+                    <td>1500</td>
+                    <td>3000</td>
+                    <td><a href="#booking" class="btn-small">Book</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CSK vs KKR</td>
+                    <td>03-04-2026</td>
+                    <td>Chennai</td>
+                    <td>700</td>
+                    <td>1400</td>
+                    <td>2800</td>
+                    <td><a href="#booking" class="btn-small">Book</a></td>
+                </tr>
+            </tbody>
         </table>
     </section>
 
     <hr>
 
-    <section id="booking">
+    <section id="booking" class="card">
         <h2>Book Your Ticket</h2>
 
-        <form>
-            Match:
-            <select>
-                <option>RCB vs MI</option>
-                <option>CSK vs KKR</option>
-            </select>
-            <br><br>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="match">Match:</label>
+                <select id="match" name="match">
+                    <option value="RCB vs MI">RCB vs MI</option>
+                    <option value="CSK vs KKR">CSK vs KKR</option>
+                </select>
+            </div>
 
-            Stand Category:
-            <select>
-                <option>General</option>
-                <option>Premium</option>
-                <option>VIP</option>
-            </select>
-            <br><br>
+            <div class="form-group">
+                <label for="stand">Stand Category:</label>
+                <select id="stand" name="stand">
+                    <option value="General">General</option>
+                    <option value="Premium">Premium</option>
+                    <option value="VIP">VIP</option>
+                </select>
+            </div>
 
-            Number of Tickets:
-            <input type="number" min="1">
-            <br><br>
+            <div class="form-group">
+                <label for="tickets">Number of Tickets:</label>
+                <input type="number" id="tickets" name="tickets" min="1" value="1" required>
+            </div>
 
-            Name:
-            <input type="text">
-            <br><br>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
 
-            Email:
-            <input type="email">
-            <br><br>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-            Phone:
-            <input type="tel">
-            <br><br>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
 
             <button type="submit">Book Now</button>
         </form>
@@ -137,7 +151,7 @@
 
     <hr>
 
-    <section>
+    <section class="card">
         <h2>Booking Summary</h2>
         <p>Match: RCB vs MI</p>
         <p>Stand: General</p>
@@ -148,22 +162,28 @@
 
     <hr>
 
-    <section id="mybookings">
+    <section id="mybookings" class="card">
         <h2>My Ticket Bookings</h2>
-        <table border="1" cellpadding="10">
-            <tr>
-                <th>Booking ID</th>
-                <th>Match</th>
-                <th>Tickets</th>
-                <th>Amount</th>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Match</th>
+                    <th>Tickets</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">No bookings available.</td>
+                </tr>
+            </tbody>
         </table>
-        <p>No bookings available.</p>
     </section>
 
     <hr>
 
-    <section id="guidelines">
+    <section id="guidelines" class="card">
         <h2>Guidelines</h2>
 
         <h3>Ticket Verification</h3>
@@ -183,4 +203,5 @@
     </footer>
 
 </body>
+
 </html>
