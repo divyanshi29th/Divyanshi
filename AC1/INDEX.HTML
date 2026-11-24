@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Ticket Booking</title>
+</head>
+<body>
+
+    <header>
+        <h1>IPL Ticket Booking 2026</h1>
+        <nav>
+            <a href="#matches">Matches</a> |
+            <a href="#booking">Book Ticket</a> |
+            <a href="#mybookings">My Bookings</a> |
+            <a href="#guidelines">Guidelines</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section>
+        <h1>Experience The Stadium Energy Live!</h1>
+        <p>Book your IPL tickets now!</p>
+        <a href="#matches">View Schedule</a>
+        <a href="#booking">Book Ticket</a>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>About IPL 2026</h2>
+        <h3>Popular Teams</h3>
+        <ul>
+            <li>RCB</li>
+            <li>CSK</li>
+            <li>MI</li>
+            <li>KKR</li>
+            <li>SRH</li>
+        </ul>
+
+        <h3>Match Venues</h3>
+        <ul>
+            <li>Bengaluru</li>
+            <li>Mumbai</li>
+            <li>Chennai</li>
+            <li>Kolkata</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <section id="matches">
+        <h2>Match Schedule</h2>
+
+        <label>Filter by Team:</label>
+        <select>
+            <option>All Teams</option>
+            <option>RCB</option>
+            <option>CSK</option>
+            <option>MI</option>
+        </select>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Match No.</th>
+                <th>Teams</th>
+                <th>Date & Time</th>
+                <th>Venue</th>
+                <th>General</th>
+                <th>Premium</th>
+                <th>VIP</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>RCB vs MI</td>
+                <td>01-04-2026</td>
+                <td>Bengaluru</td>
+                <td>800</td>
+                <td>1500</td>
+                <td>3000</td>
+                <td><a href="#booking">Book</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>CSK vs KKR</td>
+                <td>03-04-2026</td>
+                <td>Chennai</td>
+                <td>700</td>
+                <td>1400</td>
+                <td>2800</td>
+                <td><a href="#booking">Book</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="booking">
+        <h2>Book Your Ticket</h2>
+
+        <form>
+            Match:
+            <select>
+                <option>RCB vs MI</option>
+                <option>CSK vs KKR</option>
+            </select>
+            <br><br>
+
+            Stand Category:
+            <select>
+                <option>General</option>
+                <option>Premium</option>
+                <option>VIP</option>
+            </select>
+            <br><br>
+
+            Number of Tickets:
+            <input type="number" min="1">
+            <br><br>
+
+            Name:
+            <input type="text">
+            <br><br>
+
+            Email:
+            <input type="email">
+            <br><br>
+
+            Phone:
+            <input type="tel">
+            <br><br>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Booking Summary</h2>
+        <p>Match: RCB vs MI</p>
+        <p>Stand: General</p>
+        <p>Ticket Price: ₹800</p>
+        <p>Quantity: 1</p>
+        <p>Total Amount: ₹800</p>
+    </section>
+
+    <hr>
+
+    <section id="mybookings">
+        <h2>My Ticket Bookings</h2>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Booking ID</th>
+                <th>Match</th>
+                <th>Tickets</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+        <p>No bookings available.</p>
+    </section>
+
+    <hr>
+
+    <section id="guidelines">
+        <h2>Guidelines</h2>
+
+        <h3>Ticket Verification</h3>
+        <p>Carry your valid ticket.</p>
+
+        <h3>ID Proof Requirement</h3>
+        <p>Bring your valid ID proof.</p>
+
+        <h3>Prohibited Items</h3>
+        <p>Weapons and outside food are not allowed.</p>
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>Copyright &copy; 2026 IPL Ticket Booking. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
